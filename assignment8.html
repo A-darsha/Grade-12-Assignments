@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Design and Database Models</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-image: url('https://svitla.com/uploads_converted/0/2135-database_management_software.webp?1560161553');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav {
+            background-color: #f2f2f2;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav .nav-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px 20px;
+            white-space: nowrap;
+        }
+        nav a:hover {
+            background-color: #ddd;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            bottom: 0;
+            width: 100%;
+        }
+        section {
+            margin: 20px;
+        }
+        code {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            padding: 5px;
+            display: block;
+            margin: 10px 0;
+        }
+        pre {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            padding: 10px;
+            overflow-x: auto;
+        }
+        ol {
+            margin: 0;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Database Design and Database Models</h1>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <a href="index.html">Home</a>
+            <a href="assignments.html">Assignments</a>
+            <a href="#database-design">Database Design</a>
+            <a href="#database-models">Database Models</a>
+        </div>
+    </nav>
+
+    <section id="database-design">
+        <h2>Database Design</h2>
+        <p>Database design involves creating a structured framework for storing and managing data. Key components include:</p>
+        <ul>
+            <li><strong>Schema Design:</strong> Defines the database structure including tables and columns.</li>
+            <li><strong>Normalization:</strong> Organizes data to minimize redundancy and improve integrity.</li>
+            <li><strong>Relationships:</strong> Establishes connections between tables using primary and foreign keys.</li>
+            <li><strong>Indexes:</strong> Enhances data retrieval speed by creating indexes on frequently queried columns.</li>
+            <li><strong>Constraints:</strong> Enforces rules to maintain data accuracy and integrity.</li>
+        </ul>
+    </section>
+
+    <section id="database-models">
+        <h2>Database Models</h2>
+        <p>Different database models provide various ways to structure and access data. Some common models include:</p>
+        
+        <h3>1. Relational Model</h3>
+        <p>The relational model organizes data into tables (relations), where each table is a collection of rows (records) and columns (attributes). Each table represents an entity, such as "Customer" or "Order," and the columns represent attributes of that entity.</p>
+        <ul>
+            <li><strong>Tables:</strong> Data is stored in tables, with each table having a unique name.</li>
+            <li><strong>Rows:</strong> Each row in a table represents a single record.</li>
+            <li><strong>Columns:</strong> Each column represents an attribute of the entity described by the table.</li>
+            <li><strong>Keys:</strong> Tables are linked through primary and foreign keys. A primary key uniquely identifies a record within a table, while a foreign key is used to link records between tables.</li>
+            <li><strong>SQL:</strong> Data is queried using SQL (Structured Query Language), which allows for complex queries and transactions.</li>
+        </ul>
+        <p><strong>Example:</strong> MySQL, PostgreSQL.</p>
+
+        <h3>2. Hierarchical Model</h3>
+        <p>The hierarchical model organizes data in a tree-like structure where each record has a single parent and can have multiple children. This model is best suited for representing nested data or hierarchical relationships.</p>
+        <ul>
+            <li><strong>Parent-Child Relationships:</strong> Data is arranged in a hierarchy, with a single root node and branches representing relationships between parent and child nodes.</li>
+            <li><strong>Tree Structure:</strong> Each child node has only one parent, which creates a strict hierarchy.</li>
+        </ul>
+        <p><strong>Example:</strong> IBM IMS.</p>
+
+        <h3>3. Network Model</h3>
+        <p>The network model uses a graph-like structure where records (nodes) can have multiple parent and child relationships. This model is more flexible than the hierarchical model, allowing for complex many-to-many relationships.</p>
+        <ul>
+            <li><strong>Graph Structure:</strong> Nodes represent records, and edges represent relationships between nodes.</li>
+            <li><strong>Many-to-Many Relationships:</strong> Unlike the hierarchical model, nodes can have multiple parent and child nodes, allowing for more complex relationships.</li>
+        </ul>
+        <p><strong>Example:</strong> IDS (Integrated Data Store).</p>
+
+        <h3>4. Object-Oriented Model</h3>
+        <p>The object-oriented model integrates principles from object-oriented programming into databases. Data is stored as objects, which include both data and methods that operate on the data.</p>
+        <ul>
+            <li><strong>Objects:</strong> Data is encapsulated in objects, which can inherit properties and methods from other objects.</li>
+            <li><strong>Inheritance:</strong> Objects can inherit attributes and methods from parent objects, promoting reuse and organization.</li>
+            <li><strong>Encapsulation:</strong> Data and methods are bundled together, which can simplify interactions with the database.</li>
+        </ul>
+        <p><strong>Example:</strong> ObjectDB.</p>
+
+        <h3>5. Document Model</h3>
+        <p>The document model stores data in flexible, semi-structured formats such as JSON or XML. Each document is a self-contained unit of data that can be nested and queried.</p>
+        <ul>
+            <li><strong>Documents:</strong> Each document is a collection of key-value pairs or a structured format like JSON or XML.</li>
+            <li><strong>Flexibility:</strong> Documents can vary in structure, allowing for a more flexible schema compared to traditional relational databases.</li>
+            <li><strong>Queries:</strong> Documents can be queried using specialized query languages that support nested data.</li>
+        </ul>
+        <p><strong>Example:</strong> MongoDB.</p>
+
+        <h3>6. Key-Value Model</h3>
+        <p>The key-value model stores data as key-value pairs. Each key is unique and maps to a value, which can be a simple data type or a more complex structure.</p>
+        <ul>
+            <li><strong>Keys:</strong> Keys are unique identifiers used to access values.</li>
+            <li><strong>Values:</strong> Values can be strings, numbers, or more complex data structures.</li>
+            <li><strong>Performance:</strong> This model is optimized for high-performance lookups and is often used in caching systems.</li>
+        </ul>
+        <p><strong>Example:</strong> Redis.</p>
+
+        <h3>7. Column-Family Model</h3>
+        <p>The column-family model organizes data into column families rather than rows. Each column family contains columns that store related data together, which can improve performance for read and write operations.</p>
+        <ul>
+            <li><strong>Column Families:</strong> Data is stored in columns grouped into column families, which allows for efficient access and storage.</li>
+            <li><strong>Scalability:</strong> This model is well-suited for distributed databases and can scale horizontally.</li>
+        </ul>
+        <p><strong>Example:</strong> Cassandra.</p>
+    </section>
+
+    <footer>
+        <p>Contact: adarshasubedi63@gmail.com | Phone: 9888888888</p>
+    </footer>
+</body>
+</html>

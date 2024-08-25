@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Functions and Logical Operators</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-image: url('https://svitla.com/uploads_converted/0/2135-database_management_software.webp?1560161553');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav {
+            background-color: #f2f2f2;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav .nav-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px 20px;
+            white-space: nowrap;
+        }
+        nav a:hover {
+            background-color: #ddd;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            bottom: 0;
+            width: 100%;
+        }
+        section {
+            margin: 20px;
+        }
+        code {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            padding: 5px;
+            display: block;
+            margin: 10px 0;
+        }
+        pre {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            padding: 10px;
+            overflow-x: auto;
+        }
+        ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SQL Functions and Logical Operators</h1>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <a href="index.html">Home</a>
+            <a href="assignments.html">Assignments</a>
+            <a href="#sql-logical-operations">SQL Logical Operations</a>
+            <a href="#order-ing-operation">Ordering Operation</a>
+            <a href="#group-ing-operation">Grouping Operation</a>
+            <a href="#aggregate-functions">Aggregate Functions</a>
+            <a href="#string-functions">String Functions</a>
+            <a href="#others">Others</a>
+        </div>
+    </nav>
+
+    <section id="sql-logical-operations">
+        <h2>SQL Logical Operations</h2>
+        <p>Logical operators are used to combine multiple conditions in a SQL query. Here are some common SQL logical operators:</p>
+        
+        <h3>AND</h3>
+        <p>The AND operator is used to combine multiple conditions, and all conditions must be true for a record to be included in the result set.</p>
+        <pre><code>SELECT * FROM EMPLOYEE
+WHERE SALARY < 10000 AND AGE > 25;</code></pre>
+
+        <h3>OR</h3>
+        <p>The OR operator is used to combine multiple conditions, and at least one condition must be true for a record to be included in the result set.</p>
+        <pre><code>SELECT * FROM STUDENTS
+WHERE RANK > 20 OR MARKS > 600;</code></pre>
+
+        <h3>NOT</h3>
+        <p>The NOT operator is used to negate a condition. Records will be included in the result set if the condition is not true.</p>
+        <pre><code>SELECT * FROM EMP
+WHERE NOT SALARY = 10000;</code></pre>
+    </section>
+
+    <section id="order-ing-operation">
+        <h2>Ordering Operation</h2>
+        <p>Ordering operations sort the results of a query based on specified columns:</p>
+        
+        <h3>ASC</h3>
+        <p>Sorts the results in ascending order (default).</p>
+        <pre><code>SELECT * FROM EMP
+ORDER BY ID ASC;</code></pre>
+
+        <h3>DESC</h3>
+        <p>Sorts the results in descending order.</p>
+        <pre><code>SELECT * FROM EMP
+ORDER BY ID DESC;</code></pre>
+    </section>
+
+    <section id="group-ing-operation">
+        <h2>Grouping Operation</h2>
+        <p>Grouping operations are used to group rows that have the same values in specified columns into summary rows:</p>
+        <pre><code>SELECT FNAME, LNAME FROM EMP
+GROUP BY Name;</code></pre>
+    </section>
+
+    <section id="aggregate-functions">
+        <h2>Aggregate Functions</h2>
+        <p>Aggregate functions perform a calculation on a set of values and return a single value. Here are some common aggregate functions:</p>
+        
+        <h3>AVERAGE</h3>
+        <pre><code>SELECT AVG(salary) FROM EMP;</code></pre>
+
+        <h3>MINIMUM</h3>
+        <pre><code>SELECT MIN(salary) FROM EMP;</code></pre>
+
+        <h3>MAXIMUM</h3>
+        <pre><code>SELECT MAX(salary) FROM EMP;</code></pre>
+
+        <h3>SUM</h3>
+        <pre><code>SELECT SUM(salary) FROM EMP;</code></pre>
+
+        <h3>COUNT</h3>
+        <pre><code>SELECT COUNT(id) FROM EMP;</code></pre>
+
+        <h3>DISTINCT</h3>
+        <pre><code>SELECT DISTINCT(name) FROM EMP;</code></pre>
+
+        <h3>ROUND</h3>
+        <pre><code>SELECT ROUND(MARKS, 2) FROM STUDENTS;</code></pre>
+    </section>
+
+    <section id="string-functions">
+        <h2>String Functions</h2>
+        <p>String functions are used to manipulate and retrieve information from string data types:</p>
+        
+        <h3>LENGTH</h3>
+        <pre><code>SELECT LENGTH('APPLE');</code></pre>
+
+        <h3>REVERSE</h3>
+        <pre><code>SELECT REVERSE('APPLE');</code></pre>
+
+        <h3>REPLICATE</h3>
+        <pre><code>SELECT REPLICATE('APPLE', 3);</code></pre>
+
+        <h3>UPPERCASE</h3>
+        <pre><code>SELECT UPPER('apple');</code></pre>
+
+        <h3>LOWERCASE</h3>
+        <pre><code>SELECT LOWER('APPLE');</code></pre>
+
+        <h3>CONCATENATION</h3>
+        <pre><code>SELECT CONCAT('NE', 'PA', 'L');</code></pre>
+
+        <h3>LEFT MOST CHARACTER</h3>
+        <pre><code>SELECT LEFT('APPLE', 3);</code></pre>
+
+        <h3>RIGHT MOST CHARACTER</h3>
+        <pre><code>SELECT RIGHT('APPLE', 3);</code></pre>
+    </section>
+
+    <section id="others">
+        <h2>Others</h2>
+        <p>Additional SQL functions and operators:</p>
+
+        <h3>IN</h3>
+        <pre><code>SELECT ADDRESS FROM STD
+WHERE ADDRESS IN ('KTM', 'BIKE', 'PTN');</code></pre>
+
+        <h3>BETWEEN</h3>
+        <pre><code>SELECT SALARY FROM EMP
+WHERE SALARY BETWEEN 3000 AND 40000;</code></pre>
+
+        <h3>PERCENTAGE</h3>
+        <pre><code>SELECT NAME FROM STD
+WHERE NAME LIKE '%a';</code></pre>
+
+        <h3>UNDERSCORE</h3>
+        <pre><code>SELECT NAME FROM STD
+WHERE NAME LIKE '%__B';</code></pre>
+
+        <h3>HAVING</h3>
+        <pre><code>SELECT NAME FROM STD
+WHERE GRADE = 'A'
+HAVING MARKS > 800;</code></pre>
+    </section>
+
+    <footer>
+        <p>Contact: adarshasubedi63@gmail.com | Phone: 9888888888</p>
+    </footer>
+</body>
+</html>

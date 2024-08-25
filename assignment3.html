@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setting Up XAMPP on Your PC</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-image: url('https://svitla.com/uploads_converted/0/2135-database_management_software.webp?1560161553');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav {
+            background-color: #f2f2f2;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav .nav-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px 20px;
+            white-space: nowrap;
+        }
+        nav a:hover {
+            background-color: #ddd;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            bottom: 0;
+            width: 100%;
+        }
+        section {
+            margin: 20px;
+        }
+        code {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            padding: 5px;
+            display: block;
+            margin: 10px 0;
+        }
+        pre {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            padding: 10px;
+            overflow-x: auto;
+        }
+        ol {
+            margin: 0;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Setting Up XAMPP on Your PC</h1>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <a href="index.html">Home</a>
+            <a href="assignments.html">Assignments</a>
+            <a href="#download">Download</a>
+            <a href="#install">Install</a>
+            <a href="#configure">Configure</a>
+            <a href="#test">Test</a>
+        </div>
+    </nav>
+
+    <section id="download">
+        <h2>Download XAMPP</h2>
+        <p>1. Visit the official XAMPP website: <a href="https://www.apachefriends.org/index.html" target="_blank">Apache Friends</a>.</p>
+        <p>2. Choose the XAMPP version for your operating system (Windows, Linux, or OS X).</p>
+        <p>3. Click on the "Download" button to get the installer.</p>
+    </section>
+
+    <section id="install">
+        <h2>Install XAMPP</h2>
+        <ol>
+            <li>Run the downloaded installer.</li>
+            <li>Follow the on-screen instructions to complete the installation.</li>
+            <li>Select the components you want to install (e.g., Apache, MySQL, PHP, etc.).</li>
+            <li>Choose the installation directory (default is usually fine).</li>
+            <li>Click "Next" and then "Install" to begin the installation process.</li>
+        </ol>
+    </section>
+
+    <section id="configure">
+        <h2>Configure XAMPP</h2>
+        <p>1. Launch XAMPP Control Panel from the Start menu or desktop shortcut.</p>
+        <p>2. Start the Apache and MySQL services by clicking on the "Start" buttons next to each service.</p>
+        <p>3. Configure Apache and MySQL settings if needed. You can access the configuration files via the XAMPP Control Panel:</p>
+        <pre><code>Apache Configuration: Config > Apache (httpd.conf)</code></pre>
+        <pre><code>MySQL Configuration: Config > MySQL (my.ini)</code></pre>
+        <p>4. Open your web browser and navigate to <code>http://localhost</code> to check if Apache is running.</p>
+        <p>5. To manage MySQL databases, navigate to <code>http://localhost/phpmyadmin</code>.</p>
+    </section>
+
+    <section id="test">
+        <h2>Test Your Setup</h2>
+        <p>1. Create a test PHP file to ensure PHP is working:</p>
+        <pre><code>&lt;?php
+echo "Hello, XAMPP!";
+?&gt;</code></pre>
+        <p>2. Save this file as <code>test.php</code> in the <code>htdocs</code> directory inside your XAMPP installation directory (e.g., <code>C:\xampp\htdocs\</code>).</p>
+        <p>3. Open your web browser and navigate to <code>http://localhost/test.php</code>. You should see the message "Hello, XAMPP!" displayed.</p>
+    </section>
+
+    <footer>
+        <p>Contact: adarshasubedi63@gmail.com | Phone: 9888888888</p>
+    </footer>
+</body>
+</html>

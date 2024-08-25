@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layers of Data Security, Data Integrity, and Anomalies</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-image: url('https://svitla.com/uploads_converted/0/2135-database_management_software.webp?1560161553');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav {
+            background-color: #f2f2f2;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav .nav-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px 20px;
+            white-space: nowrap;
+        }
+        nav a:hover {
+            background-color: #ddd;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            bottom: 0;
+            width: 100%;
+        }
+        section {
+            margin: 20px;
+        }
+        code {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            padding: 5px;
+            display: block;
+            margin: 10px 0;
+        }
+        pre {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            padding: 10px;
+            overflow-x: auto;
+        }
+        ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Layers of Data Security, Data Integrity, and Anomalies</h1>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <a href="index.html">Home</a>
+            <a href="assignments.html">Assignments</a>
+            <a href="#data-security">Data Security</a>
+            <a href="#data-integrity">Data Integrity</a>
+            <a href="#anomalies">Anomalies</a>
+        </div>
+    </nav>
+
+    <section id="data-security">
+        <h2>Layers of Data Security</h2>
+        <p>Data security involves multiple layers to protect data from unauthorized access and breaches. Here are the key layers with examples:</p>
+        <ul>
+            <li><strong>Physical Security:</strong> Protects the physical infrastructure. Example: Locked server rooms with biometric access control.</li>
+            <li><strong>Network Security:</strong> Protects data transmitted over networks. Example: Using firewalls and VPNs to secure data in transit.</li>
+            <li><strong>Database Security:</strong> Protects data stored in databases. Example: Implementing encryption and access control lists (ACLs) to restrict database access.</li>
+            <li><strong>Application Security:</strong> Ensures software applications are secure. Example: Regularly updating software to patch vulnerabilities.</li>
+            <li><strong>Operational Security:</strong> Policies and procedures for handling data. Example: Regular security training for employees.</li>
+        </ul>
+    </section>
+
+    <section id="data-integrity">
+        <h2>Data Integrity</h2>
+        <p>Data integrity ensures data remains accurate and reliable. Key aspects include:</p>
+        <ul>
+            <li><strong>Entity Integrity:</strong> Ensures each table has a unique primary key. Example:</li>
+        </ul>
+        <table>
+            <thead>
+                <tr>
+                    <th>StudentID</th>
+                    <th>StudentName</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>John Doe</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Jane Smith</td>
+                </tr>
+            </tbody>
+        </table>
+        <ul>
+            <li><strong>Referential Integrity:</strong> Ensures foreign keys match primary keys. Example:</li>
+        </ul>
+        <table>
+            <thead>
+                <tr>
+                    <th>CourseID</th>
+                    <th>StudentID</th>
+                    <th>CourseName</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>101</td>
+                    <td>1</td>
+                    <td>Mathematics</td>
+                </tr>
+                <tr>
+                    <td>102</td>
+                    <td>2</td>
+                    <td>English</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The <code>StudentID</code> in the `Course` table must match an existing <code>StudentID</code> in the `Student` table.</p>
+        <ul>
+            <li><strong>Domain Integrity:</strong> Ensures data values conform to a defined format. Example:</li>
+        </ul>
+        <table>
+            <thead>
+                <tr>
+                    <th>EmployeeID</th>
+                    <th>EmployeeName</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Alice Johnson</td>
+                    <td>alice.johnson@example.com</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Bob Smith</td>
+                    <td>bob.smith@example.com</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The <code>Email</code> field must follow the email format (e.g., name@domain.com).</p>
+        <ul>
+            <li><strong>Consistency:</strong> Ensures data consistency across systems. Example:</li>
+        </ul>
+        <p>If an employee's address is updated in one system, it should be updated in all related systems to maintain consistency.</p>
+    </section>
+
+    <section id="anomalies">
+        <h2>Anomalies</h2>
+        <p>Data anomalies are inconsistencies that can occur in databases. Common types include:</p>
+        <ul>
+            <li><strong>Insertion Anomaly:</strong> Occurs when certain attributes cannot be added without other attributes. Example:</li>
+        </ul>
+        <table>
+            <thead>
+                <tr>
+                    <th>CourseID</th>
+                    <th>CourseName</th>
+                    <th>Instructor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>101</td>
+                    <td>Mathematics</td>
+                    <td>Dr. Adams</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Inserting a new course might require specifying an instructor, which can be problematic if no instructor is available yet.</p>
+        <ul>
+            <li><strong>Update Anomaly:</strong> Occurs when updates are not consistently applied. Example:</li>
+        </ul>
+        <table>
+            <thead>
+                <tr>
+                    <th>StudentID</th>
+                    <th>Course</th>
+                    <th>Instructor</th>
+                    <th>InstructorEmail</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Math</td>
+                    <td>Dr. Smith</td>
+                    <td>smith@example.com</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Science</td>
+                    <td>Dr. Smith</td>
+                    <td>smith@example.com</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>English</td>
+                    <td>Dr. White</td>
+                    <td>white@example.com</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>If Dr. Smith’s email changes, it should be updated in every record to avoid inconsistencies.</p>
+        <ul>
+            <li><strong>Deletion Anomaly:</strong> Occurs when deleting data results in loss of other important data. Example:</li>
+        </ul>
+        <table>
+            <thead>
+                <tr>
+                    <th>StudentID</th>
+                    <th>Course</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Math</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Science</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>English</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Deleting a student record might also remove course enrollment records associated with that student.</p>
+    </section>
+
+    <footer>
+        <p>Contact: adarshasubedi63@gmail.com | Phone: 9888888888</p>
+    </footer>
+</body>
+</html>

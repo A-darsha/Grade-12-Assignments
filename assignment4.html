@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DDL Commands</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-image: url('https://svitla.com/uploads_converted/0/2135-database_management_software.webp?1560161553');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav {
+            background-color: #f2f2f2;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav .nav-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px 20px;
+            white-space: nowrap;
+        }
+        nav a:hover {
+            background-color: #ddd;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            bottom: 0;
+            width: 100%;
+        }
+        section {
+            margin: 20px;
+        }
+        code {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            padding: 5px;
+            display: block;
+            margin: 10px 0;
+        }
+        pre {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            padding: 10px;
+            overflow-x: auto;
+        }
+        ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>DDL Commands</h1>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <a href="index.html">Home</a>
+            <a href="assignments.html">Assignments</a>
+            <a href="#create">CREATE</a>
+            <a href="#alter">ALTER</a>
+            <a href="#drop">DROP</a>
+            <a href="#truncate">TRUNCATE</a>
+        </div>
+    </nav>
+
+    <section id="create">
+        <h2>CREATE Command</h2>
+        <p>The <code>CREATE</code> command is used to create new database objects such as tables, indexes, or views.</p>
+        <h3>Example</h3>
+        <pre><code>CREATE TABLE Employees (
+    EmployeeID INT PRIMARY KEY,
+    FirstName VARCHAR(50),
+    LastName VARCHAR(50),
+    Department VARCHAR(50)
+);</code></pre>
+        <p><strong>Output:</strong></p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Table Name</th>
+                    <th>Columns</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Employees</td>
+                    <td>EmployeeID, FirstName, LastName, Department</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="alter">
+        <h2>ALTER Command</h2>
+        <p>The <code>ALTER</code> command is used to modify an existing database object, such as adding or deleting columns from a table.</p>
+        <h3>Example</h3>
+        <pre><code>ALTER TABLE Employees
+ADD Email VARCHAR(100);</code></pre>
+        <p><strong>Output:</strong></p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Table Name</th>
+                    <th>Modified Columns</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Employees</td>
+                    <td>Email</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="drop">
+        <h2>DROP Command</h2>
+        <p>The <code>DROP</code> command is used to delete an existing database object like a table, index, or view.</p>
+        <h3>Example</h3>
+        <pre><code>DROP TABLE Employees;</code></pre>
+        <p><strong>Output:</strong></p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Action</th>
+                    <th>Object</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Delete</td>
+                    <td>Employees Table</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="truncate">
+        <h2>TRUNCATE Command</h2>
+        <p>The <code>TRUNCATE</code> command is used to delete all rows from a table, but it does not remove the table structure.</p>
+        <h3>Example</h3>
+        <pre><code>TRUNCATE TABLE Employees;</code></pre>
+        <p><strong>Output:</strong></p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Action</th>
+                    <th>Object</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Remove Rows</td>
+                    <td>Employees Table</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <footer>
+        <p>Contact: adarshasubedi63@gmail.com | Phone: 9888888888</p>
+    </footer>
+</body>
+</html>

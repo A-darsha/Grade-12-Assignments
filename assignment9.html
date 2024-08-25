@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Types of Relationships in DBMS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-image: url('https://svitla.com/uploads_converted/0/2135-database_management_software.webp?1560161553');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav {
+            background-color: #f2f2f2;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav .nav-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px 20px;
+            white-space: nowrap;
+        }
+        nav a:hover {
+            background-color: #ddd;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            bottom: 0;
+            width: 100%;
+        }
+        section {
+            margin: 20px;
+        }
+        code {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            padding: 5px;
+            display: block;
+            margin: 10px 0;
+        }
+        pre {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            padding: 10px;
+            overflow-x: auto;
+        }
+        ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Types of Relationships in DBMS</h1>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <a href="index.html">Home</a>
+            <a href="assignments.html">Assignments</a>
+            <a href="#types-of-relationships">Types of Relationships</a>
+        </div>
+    </nav>
+
+    <section id="types-of-relationships">
+        <h2>Types of Relationships in DBMS</h2>
+        
+        <h3>1. One-to-One (1:1) Relationship</h3>
+        <p>In a one-to-one relationship, each record in Table A corresponds to exactly one record in Table B, and vice versa.</p>
+        <ul>
+            <li><strong>Example:</strong> A table of employees and a table of employee IDs. Each employee has a unique employee ID, and each ID corresponds to only one employee.</li>
+            <li><strong>Implementation:</strong> Typically implemented by having a foreign key in one table that references the primary key of another table, with a unique constraint on the foreign key column.</li>
+        </ul>
+
+        <h3>2. One-to-Many (1:N) Relationship</h3>
+        <p>In a one-to-many relationship, a single record in Table A can be associated with multiple records in Table B, but each record in Table B is associated with only one record in Table A.</p>
+        <ul>
+            <li><strong>Example:</strong> A table of customers and a table of orders. Each customer can have multiple orders, but each order is placed by only one customer.</li>
+            <li><strong>Implementation:</strong> Implemented by placing a foreign key in Table B that references the primary key of Table A.</li>
+        </ul>
+
+        <h3>3. Many-to-One (N:1) Relationship</h3>
+        <p>This is essentially the inverse of the one-to-many relationship. Multiple records in Table A are associated with a single record in Table B.</p>
+        <ul>
+            <li><strong>Example:</strong> A table of orders and a table of customers. Each order is associated with one customer, but a customer can have multiple orders.</li>
+            <li><strong>Implementation:</strong> Implemented by placing a foreign key in Table A that references the primary key of Table B.</li>
+        </ul>
+
+        <h3>4. Many-to-Many (M:N) Relationship</h3>
+        <p>In a many-to-many relationship, multiple records in Table A can be associated with multiple records in Table B. This type of relationship usually requires a junction table (also called an associative table) to manage the associations.</p>
+        <ul>
+            <li><strong>Example:</strong> A table of students and a table of courses. A student can enroll in multiple courses, and each course can have multiple students enrolled.</li>
+            <li><strong>Implementation:</strong> Implemented by creating a junction table with foreign keys referencing the primary keys of Table A and Table B. This junction table holds the associations between the records.</li>
+        </ul>
+
+        <h3>5. Self-Referencing Relationship</h3>
+        <p>A self-referencing relationship is a type of relationship where a table has a foreign key that references its own primary key. This is used to represent hierarchical data or recursive relationships.</p>
+        <ul>
+            <li><strong>Example:</strong> An employee table where each employee has a manager who is also an employee. Here, the table will have a foreign key column referencing the primary key of the same table.</li>
+            <li><strong>Implementation:</strong> Implemented by adding a foreign key in the same table that references the table's primary key.</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>Contact: adarshasubedi63@gmail.com | Phone: 9888888888</p>
+    </footer>
+</body>
+</html>

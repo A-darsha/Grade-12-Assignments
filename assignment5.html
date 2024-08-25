@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steps for Various Tasks</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-image: url('https://ideascale.com/wp-content/uploads/2022/03/Task-Management-Advantages-scaled.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: #333;
+            color: black;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav {
+            background-color: #f2f2f2;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav .nav-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px 20px;
+            white-space: nowrap;
+        }
+        nav a:hover {
+            background-color: #ddd;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            bottom: 0;
+            width: 100%;
+        }
+        section {
+            margin: 20px;
+        }
+        code {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            padding: 5px;
+            display: block;
+            margin: 10px 0;
+        }
+        pre {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            padding: 10px;
+            overflow-x: auto;
+        }
+        ol {
+            margin: 0;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Steps for Various Tasks</h1>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <a href="index.html">Home</a>
+            <a href="assignments.html">Assignments</a>
+            <a href="#create-gmail">Create Gmail Account</a>
+            <a href="#create-github">Create GitHub Account</a>
+            <a href="#connect-vscode">Connect VS Code to GitHub</a>
+            <a href="#clone-pull">Clone/Pull Repository</a>
+            <a href="#push-repo">Push Repository</a>
+            <a href="#publish-site">Publish Repository</a>
+        </div>
+    </nav>
+
+    <section id="create-gmail">
+        <h2>1. Steps to Create a Gmail Account</h2>
+        <ol>
+            <li>Open the Gmail sign-up page: <a href="https://accounts.google.com/signup">Gmail Sign-Up</a>.</li>
+            <li>Enter your first and last name.</li>
+            <li>Choose a username.</li>
+            <li>Create and confirm a password.</li>
+            <li>Click "Next."</li>
+            <li>Enter your phone number.</li>
+            <li>Verify with the code sent via SMS.</li>
+            <li>Enter a recovery email address (optional), birthdate, and gender.</li>
+            <li>Click "Next."</li>
+            <li>Agree to the Privacy and Terms.</li>
+            <li>Click "Create Account."</li>
+            <li>Set up your account preferences (optional).</li>
+            <li>Access your new Gmail account.</li>
+        </ol>
+    </section>
+
+    <section id="create-github">
+        <h2>2. Steps to Create a GitHub Account</h2>
+        <ol>
+            <li>Open the GitHub sign-up page: <a href="https://github.com/join">GitHub Sign-Up</a>.</li>
+            <li>Enter your username.</li>
+            <li>Enter your email address.</li>
+            <li>Create and confirm a password.</li>
+            <li>Complete the CAPTCHA verification.</li>
+            <li>Click "Create account."</li>
+            <li>Check your email for a verification link and verify your email address.</li>
+            <li>Choose your plan (free or paid).</li>
+            <li>Set up your preferences and complete the setup process.</li>
+        </ol>
+    </section>
+
+    <section id="connect-vscode">
+        <h2>3. Steps to Connect VS Code Editor to GitHub Account</h2>
+        <ol>
+            <li>Open Visual Studio Code.</li>
+            <li>Click on the Extensions icon on the sidebar.</li>
+            <li>Search for and install the "GitHub Pull Requests and Issues" extension.</li>
+            <li>Click on the Source Control icon on the sidebar.</li>
+            <li>Click on "Initialize Repository" or open an existing repository.</li>
+            <li>Click on "Sign in to GitHub" in the Source Control panel.</li>
+            <li>Follow the prompts to log in to your GitHub account.</li>
+            <li>Authorize Visual Studio Code to access your GitHub account.</li>
+            <li>Verify the connection in the Source Control panel.</li>
+        </ol>
+    </section>
+
+    <section id="clone-pull">
+        <h2>4. Steps to Clone/Pull Repository from GitHub</h2>
+        <h3>Cloning a Repository</h3>
+        <ol>
+            <li>Open Visual Studio Code.</li>
+            <li>Open the Command Palette (Ctrl+Shift+P or Cmd+Shift+P).</li>
+            <li>Type and select <code>Git: Clone</code>.</li>
+            <li>Enter the repository URL.</li>
+            <li>Choose a local directory for the repository.</li>
+            <li>Wait for the cloning process to complete.</li>
+            <li>Open the cloned repository in VS Code.</li>
+        </ol>
+
+        <h3>Pulling Changes</h3>
+        <ol>
+            <li>Open Visual Studio Code.</li>
+            <li>Open the Command Palette (Ctrl+Shift+P or Cmd+Shift+P).</li>
+            <li>Type and select <code>Git: Pull</code>.</li>
+            <li>Choose the branch to pull changes from (if prompted).</li>
+            <li>Wait for the pull process to complete.</li>
+        </ol>
+    </section>
+
+    <section id="push-repo">
+        <h2>5. Steps to Push Repository to GitHub</h2>
+        <ol>
+            <li>Open Visual Studio Code.</li>
+            <li>Open the Command Palette (Ctrl+Shift+P or Cmd+Shift+P).</li>
+            <li>Type and select <code>Git: Add</code> to stage changes.</li>
+            <li>Type and select <code>Git: Commit</code> and enter a commit message.</li>
+            <li>Type and select <code>Git: Push</code>.</li>
+            <li>Enter the repository URL (if prompted) or select the remote repository.</li>
+            <li>Confirm the push to send changes to GitHub.</li>
+        </ol>
+    </section>
+
+    <section id="publish-site">
+        <h2>6. Steps to Publish the Repository as a Live Site</h2>
+        <ol>
+            <li>Open GitHub and go to the repository.</li>
+            <li>Click on the "Settings" tab.</li>
+            <li>Scroll down to the "Pages" section on the sidebar.</li>
+            <li>Select the source branch for the site (usually <code>main</code> or <code>gh-pages</code>).</li>
+            <li>Click "Save."</li>
+            <li>Wait for GitHub to build and deploy the site.</li>
+            <li>Copy the site URL from the "GitHub Pages" section.</li>
+        </ol>
+    </section>
+
+    <footer>
+        <p>Contact: adarshasubedi63@gmail.com | Phone: 9888888888</p>
+    </footer>
+</body>
+</html>
